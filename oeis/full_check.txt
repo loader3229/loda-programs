@@ -653,7 +653,9 @@ A204987: Least k such that n divides 2^k - 2^j for some j satisfying 1 <= j < k.
 A205866: Positions of multiples of 8 in A204922 (differences of Fibonacci numbers).
 A209931: Numbers k such that smallest digit of all divisors of k is 1.
 A211667: Number of iterations sqrt(sqrt(sqrt(...(n)...))) such that the result is < 2.
+A214657: Floor of the moduli of the zeros of the complex Fibonacci function.
 A214671: Floor of the real parts of the zeros of the complex Lucas function on the right half-plane.
+A214673: Floor of the moduli of the zeros of the complex Lucas function.
 A214971: Integers k for which the base-phi representation of k includes 1.
 A214990: Second nearest integer to n*r, where r = (1+ sqrt(5))/2, the golden ratio.
 A214991: Second nearest integer to n*(1+golden ratio).
@@ -837,6 +839,7 @@ A293449: Characteristic function for A056166, numbers that have no nonprime expo
 A293484: The number of 7th powers in the multiplicative group modulo n.
 A293698: Values of positive integer i such that floor(tan(i)) = 1.
 A293700: First differences of A293698.
+A293703: a(n) is the length of the longest palindromic subsequence in the first differences of the list of the first n negative and positive roots of floor(tan(k))=1.
 A293706: a(n) is the shift of the longest palindromic subsequence within the first differences of the concatenation of the first n negative and positive roots of floor(tan(k)) = 1.
 A294926: Number of proper divisors of n that are deficient (A005100).
 A294936: Characteristic function for nondeficient numbers (A023196): a(n) = 1 if A001065(n) >= n, 0 otherwise.
