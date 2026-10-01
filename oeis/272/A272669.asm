@@ -1,25 +1,22 @@
 ; A272669: A 13-ordering of T = {0,1,2,3,5,8,10,11,12} + 13*Z.
 ; Submitted by loader3229
 ; 0,1,2,3,5,8,10,11,12,13,14,15,16,18
-; Formula: a(n) = -n+truncate((4*floor((4*n-2*(floor((n+4)/3)%3)+6)/3)+2*n)/3)-1
+; Formula: a(n) = 2*(n>=5)+floor((10*n+53)/90)+floor((10*n+30)/9)-3
 
-sub $2,$0
-mov $3,$0
-add $3,4
-div $3,3
-mod $3,3
-mul $3,-2
-add $3,6
-mov $4,$0
-mul $0,4
-add $0,$3
-div $0,3
-add $0,$4
-mul $0,2
-add $0,$2
+mov $2,$0
+add $2,3
+mov $3,$2
+mul $2,10
+div $2,9
+mul $3,10
+add $3,23
+div $3,90
+add $3,$2
+geq $0,5
+mov $2,$3
+add $2,1
 mov $1,$0
-mul $1,2
-div $1,3
-sub $1,1
 add $1,$2
+add $1,$0
 mov $0,$1
+sub $0,4

@@ -5,13 +5,12 @@
 
 #offset 1
 
-mov $2,$0
+mov $1,$0
 mul $0,8
 nrt $0,2
 add $0,1
 div $0,2
-mov $1,$0
-bin $0,2
-sub $2,$0
-div $1,$2
-mov $0,$1
+mov $2,$0
+bin $2,2
+sub $1,$2
+div $0,$1

@@ -1,5 +1,5 @@
 ; A011565: Stirling numbers of second kind S2(16,n).
-; Submitted by 1scorpion
+; Submitted by loader3229
 ; 1,32767,7141686,171798901,1096190550,2734926558,3281882604,2141764053,820784250,193754990,28936908,2757118,165620,6020,120,1
 
 #offset 1
@@ -10,12 +10,11 @@ add $1,$0
 mov $4,$1
 mul $1,8
 nrt $1,2
-sub $1,1
+add $1,1
 div $1,2
 mov $5,$1
-add $5,1
 bin $5,2
-sub $1,1
+sub $1,2
 sub $4,$5
 mov $2,$4
 sub $2,1

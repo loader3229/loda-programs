@@ -1,25 +1,22 @@
 ; A171233: Array, T(n,k) = 2*(n/k), if n mod k = 0; otherwise, T(n,k) = 1. Read by antidiagonals.
-; Submitted by kpmonaghan
+; Submitted by loader3229
 ; 2,4,1,6,2,1,8,1,1,1,10,4,2,1,1,12,1,1,1,1,1,14,6,1,2,1,1,1,16,1,4,1,1,1,1,1,18,8,1,1,2,1,1,1,1,20,1,1,1,1,1,1,1,1,1,22,10,6,4,1,2,1,1,1,1,1,24,1,1,1,1,1,1,1,1,1,1,1,26,12
-; Formula: a(n) = max(2*truncate(floor((sqrtint(8*n)+1)/2)/(-binomial(floor((sqrtint(8*n)+1)/2),2)+n))*((-truncate((floor((sqrtint(8*n)+1)/2)+1)/(-binomial(floor((sqrtint(8*n)+1)/2),2)+n))*(-binomial(floor((sqrtint(8*n)+1)/2),2)+n)+floor((sqrtint(8*n)+1)/2)+1)==0),1)
+; Formula: a(n) = (2*truncate(floor((sqrtint(8*n)+1)/2)/(-binomial(floor((sqrtint(8*n)+1)/2),2)+n)))^((-truncate((floor((sqrtint(8*n)+1)/2)+1)/(-binomial(floor((sqrtint(8*n)+1)/2),2)+n))*(-binomial(floor((sqrtint(8*n)+1)/2),2)+n)+floor((sqrtint(8*n)+1)/2)+1)==0)
 
 #offset 1
 
-mov $4,$0
+mov $2,$0
 mul $0,8
 nrt $0,2
 add $0,1
 div $0,2
-mov $2,$0
-bin $0,2
-mov $1,$2
-add $2,1
-sub $4,$0
-div $1,$4
-mov $3,$2
-mod $3,$4
+mov $1,$0
+bin $1,2
+sub $2,$1
+mov $3,$0
+add $3,1
+mod $3,$2
 equ $3,0
-mul $3,$1
-mov $0,$3
+div $0,$2
 mul $0,2
-max $0,1
+pow $0,$3

@@ -1,7 +1,7 @@
 ; A130459: A059268 * A097806.
 ; Submitted by loader3229
 ; 1,3,2,3,6,4,3,6,12,8,3,6,12,24,16,3,6,12,24,48,32,3,6,12,24,48,96,64,3,6,12,24,48,96,192,128,3,6,12,24,48,96,192,384,256
-; Formula: a(n) = gcd((-binomial(floor((sqrtint(8*n)-1)/2)+1,2)+n-1)==floor((sqrtint(8*n)-1)/2),3)*if((-binomial(floor((sqrtint(8*n)-1)/2)+1,2)+n-1)<=(-1),0,2^(-binomial(floor((sqrtint(8*n)-1)/2)+1,2)+n-1))
+; Formula: a(n) = 3^(floor((sqrtint(8*n)-1)/2)>=(-binomial(floor((sqrtint(8*n)-1)/2)+1,2)+n))*if((-binomial(floor((sqrtint(8*n)-1)/2)+1,2)+n-1)<=(-1),0,2^(-binomial(floor((sqrtint(8*n)-1)/2)+1,2)+n-1))
 
 #offset 1
 
@@ -14,11 +14,10 @@ mov $2,$1
 add $2,1
 bin $2,2
 sub $0,$2
+geq $1,$0
 sub $0,1
-mov $3,2
-pow $3,$0
-mov $4,$0
-equ $4,$1
-gcd $4,3
-mul $4,$3
-mov $0,$4
+mov $2,2
+pow $2,$0
+mov $0,3
+pow $0,$1
+mul $0,$2

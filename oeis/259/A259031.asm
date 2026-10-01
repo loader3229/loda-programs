@@ -1,21 +1,15 @@
 ; A259031: Smallest m such that |A259029(m)| = n.
-; Submitted by Jamie Morken(w2)
+; Submitted by loader3229
 ; 3,1,16,192,768,3072,12288,49152,196608,786432,3145728,12582912,50331648,201326592,805306368,3221225472,12884901888,51539607552
+; Formula: a(n) = (n==1)+bitand(4^n,-5)*(2*(n!=2)+1)
 
-mov $1,9
-mov $3,$0
-lpb $3
-  sub $3,1
-  mul $1,2
-  mov $2,31
-  add $2,$1
-  mul $2,2
-  mul $1,2
-lpe
-mov $4,9
-pow $4,$0
-div $2,$4
-add $2,1
-div $1,$2
-mov $0,$1
-div $0,3
+mov $2,$0
+equ $2,1
+mov $1,4
+pow $1,$0
+ban $1,-5
+neq $0,2
+mul $0,2
+add $0,1
+mul $0,$1
+add $0,$2
