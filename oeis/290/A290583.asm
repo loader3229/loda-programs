@@ -1,7 +1,7 @@
 ; A290583: a(n) is the factor R(n) having prime factors < (2/3)*n^2 in A285388(n) = R(n)P(n).
 ; Submitted by loader3229
 ; 1,1,15,45,28665,119301,5945469075,349882586625,37442407704398235,16728192398775,15367416005321626675,25155676359358573576275,8796919422969373203777212374275,276042834397113472381083873409429425
-; Formula: a(n) = gcd(floor(floor(((4*n^2-2)*if(binomial(2*n^2-2,n^2-1)==0,0,binomial(2*n^2-2,n^2-1)/(2^valuation(binomial(2*n^2-2,n^2-1),2))))/2)/gcd(n,floor(((4*n^2-2)*if(binomial(2*n^2-2,n^2-1)==0,0,binomial(2*n^2-2,n^2-1)/(2^valuation(binomial(2*n^2-2,n^2-1),2))))/2))),(n^2)!)
+; Formula: a(n) = gcd(floor(if((binomial(2*n^2-2,n^2-1)*(4*n^2-2))==0,0,(binomial(2*n^2-2,n^2-1)*(4*n^2-2))/(2^valuation(binomial(2*n^2-2,n^2-1)*(4*n^2-2),2)))/gcd(n,if((binomial(2*n^2-2,n^2-1)*(4*n^2-2))==0,0,(binomial(2*n^2-2,n^2-1)*(4*n^2-2))/(2^valuation(binomial(2*n^2-2,n^2-1)*(4*n^2-2),2))))),(n^2)!)
 
 #offset 1
 
@@ -13,12 +13,11 @@ mul $4,4
 mov $5,$2
 mul $2,2
 bin $2,$5
-dir $2,2
 mov $3,2
 add $3,$4
 mul $3,$2
 mov $2,$3
-div $2,2
+dir $2,2
 mov $1,$0
 gcd $1,$2
 div $2,$1
