@@ -1,26 +1,19 @@
 ; A300294: Irregular triangle giving the GCD characteristic: T(1, 1) = 1 and, for n >= 2 and 1 <= m <= n-1, T(n, m) = 1 if gcd(n, m) = 1 and 0 otherwise.
-; Submitted by Science United
+; Submitted by loader3229
 ; 1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,0,1,0,1,0,1,1,1,0,1,1,0,1,1,1,0,1,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1
-; Formula: a(n) = 0^floor(gcd(-max(n-2,0)+binomial(floor((sqrtint(8*max(n-2,0)+8)-1)/2)+1,2)+floor((sqrtint(8*max(n-2,0)+8)-1)/2)+1,-binomial(floor((sqrtint(8*max(n-2,0)+8)-1)/2)+1,2)+max(n-2,0)+1)/2)
+; Formula: a(n) = gcd(floor((sqrtint(8*n-8)+1)/2)+1,-binomial(floor((sqrtint(8*n-8)+1)/2),2)+n-1)==1
 
 #offset 1
 
-trn $0,2
-add $0,1
-mov $1,$0
-mul $1,8
-nrt $1,2
-sub $1,1
-div $1,2
-mov $3,$1
-add $3,1
-bin $3,2
-sub $0,$3
 sub $0,1
-add $1,1
-sub $1,$0
+mov $2,$0
+mul $0,8
+nrt $0,2
 add $0,1
-gcd $1,$0
-div $1,2
-pow $2,$1
-mov $0,$2
+div $0,2
+mov $1,$0
+bin $1,2
+sub $2,$1
+add $0,1
+gcd $0,$2
+equ $0,1
