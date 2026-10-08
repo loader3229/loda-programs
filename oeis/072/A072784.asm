@@ -13,7 +13,6 @@ sub $0,$4
 sub $0,1
 sub $1,$0
 lpb $1
-  dbg
   equ $3,0
   add $2,1
   div $2,2
