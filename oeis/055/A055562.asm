@@ -1,14 +1,14 @@
 ; A055562: a(n) = least number greater than a(n-1) not the sum of an earlier pair of consecutive terms, a(0) = 2.
-; Submitted by Simon Strandgaard
+; Submitted by loader3229
 ; 2,3,4,6,8,9,11,12,13,15,16,18,19,21,22,24,26,27,29,30,32,33,35,36,38,39,41,42,44,45,47,48,49,51,52,54,55,57,58,60,61,63,64,66,67,69,70,72,73,75,76,78,79,81,82,84,85,87,88,90,91,93,94,96,98,99,101,102,104,105,107,108,110,111,113,114,116,117,119,120
+; Formula: a(n) = floor((4*n-logint(n+1,2)-2*truncate((-logint(n+1,2)+n+1)/2)+4)/2)
 
+add $0,1
 mov $1,$0
-lpb $1
-  mov $2,$1
-  div $1,4
-lpe
-div $2,2
+log $1,2
+mov $2,$0
+sub $2,$1
+mod $2,2
 mul $0,3
-sub $0,$2
+add $0,$2
 div $0,2
-add $0,2
