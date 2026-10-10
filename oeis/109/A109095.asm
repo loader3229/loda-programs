@@ -1,16 +1,12 @@
 ; A109095: Numbers N such that N! is the product of exactly two smaller factorials (larger than 1).
-; Submitted by BrandyNOW
+; Submitted by loader3229
 ; 6,10,24,120,720,5040,40320,362880,3628800,39916800,479001600,6227020800,87178291200,1307674368000,20922789888000,355687428096000,6402373705728000,121645100408832000,2432902008176640000,51090942171709440000,1124000727777607680000,25852016738884976640000
+; Formula: a(n) = (n+1)!+4*(n<=2)
 
 #offset 1
 
-mov $2,1
-add $0,1
-lpb $0
-  mod $1,2
-  mul $1,4
-  add $1,$2
-  mul $2,$0
-  sub $0,1
-lpe
-mov $0,$1
+mov $1,2
+fac $1,$0
+leq $0,2
+mul $0,4
+add $0,$1
