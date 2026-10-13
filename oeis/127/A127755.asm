@@ -23,7 +23,16 @@ lpb $2
   mov $5,$3
   bin $5,2
   add $5,$0
-  seq $5,233543 ; Triangle read by rows: T(n,k) = k!.
+  mov $7,$5
+  add $5,1
+  mul $5,8
+  nrt $5,2
+  add $5,1
+  div $5,2
+  bin $5,2
+  sub $7,$5
+  mov $5,1
+  fac $5,$7
   mul $4,$5
   add $6,$4
 lpe

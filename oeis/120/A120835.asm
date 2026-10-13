@@ -10,6 +10,7 @@ lpb $0
   pow $0,2
   sub $0,6
 lpe
+sub $0,1
 seq $0,112141 ; Product of the first n semiprimes.
 mov $1,$0
 seq $0,3415 ; a(n) = n' = arithmetic derivative of n: a(0) = a(1) = 0, a(prime) = 1, a(m*n) = m*a(n) + n*a(m).

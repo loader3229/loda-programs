@@ -1,6 +1,6 @@
 ; A368830: Number of square unlabeled endofunctions from n points to themselves.
 ; Submitted by BrandyNOW
-; 1,1,2,4,9,20,47,105
+; 1,1,2,4,9,20,47,105,249,584,1402,3365,8197,19977,49105,120974,299465,742894,1848892,4610117,11521685
 ; Formula: a(n) = floor((floor((2^(n+3))/30)*(5*n+13)+floor((2^(n+3))/30))/16)+1
 
 add $0,3

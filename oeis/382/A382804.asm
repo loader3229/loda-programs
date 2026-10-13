@@ -21,7 +21,16 @@ lpb $3
   gcd $1,0
   div $1,5
   sub $2,1
-  seq $0,233543 ; Triangle read by rows: T(n,k) = k!.
+  mov $6,$0
+  add $0,1
+  mul $0,8
+  nrt $0,2
+  add $0,1
+  div $0,2
+  bin $0,2
+  sub $6,$0
+  mov $0,1
+  fac $0,$6
   mul $0,$1
   pow $0,2
   add $4,$0

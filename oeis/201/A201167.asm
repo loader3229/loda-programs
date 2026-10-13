@@ -18,8 +18,19 @@ lpb $2
   sub $2,1
   mov $4,$1
   add $4,$3
-  seq $4,109466 ; Riordan array (1, x(1-x)).
+  add $4,1
+  mov $9,$4
   add $3,1
+  mul $4,8
+  nrt $4,2
+  div $4,2
+  mov $11,$4
+  bin $11,2
+  sub $9,$11
+  sub $4,$9
+  mov $10,$4
+  sub $4,$9
+  bin $4,$10
   mov $5,$3
   bin $5,2
   add $5,$0

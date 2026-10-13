@@ -1,6 +1,6 @@
 ; A323658: Number of bipartite graphs associated with connected transitive oriented graphs.
 ; Submitted by vaughan
-; 1,1,1,2,7,25,133,854
+; 1,1,1,2,7,25,133,854,7416,82123,1183265,21983030,527594286
 
 mov $2,1
 lpb $0

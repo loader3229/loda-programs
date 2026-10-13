@@ -13,7 +13,10 @@ lpb $2
   mov $3,$5
   add $3,$1
   add $3,1
-  seq $3,188641 ; Characteristic function of Niven (or Harshad) numbers.
+  seq $3,70635 ; a(n) = n mod (sum of digits of n).
+  min $3,1
+  add $3,1
+  mod $3,2
   sub $0,$3
   mov $4,$0
   max $4,0

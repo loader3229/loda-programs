@@ -1,6 +1,6 @@
 ; A271907: Size of the largest subset S of the points of an n X n square grid such that no three of the points of S form an isosceles triangle.
 ; Submitted by Joe
-; 1,2,4,6,8,10,12,14,16,18
+; 1,2,4,6,8,10,12,14,16,18,20,20
 ; Formula: a(n) = max(2*n-2,1)
 
 #offset 1

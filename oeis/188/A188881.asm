@@ -1,12 +1,68 @@
 ; A188881: Triangle of coefficients arising from an expansion of Integral( exp(exp(exp(x))), dx).
 ; Submitted by Science United
 ; 1,1,1,2,3,2,6,11,12,6,24,50,70,60,24,120,274,450,510,360,120,720,1764,3248,4410,4200,2520,720,5040,13068,26264,40614,47040,38640,20160,5040,40320,109584,236248,403704,538776,544320,393120,181440,40320,362880,1026576,2345400,4342080,6463800,7592760,6804000,4384800,1814400,362880,3628800,10628640,25507152,50457000,82006320,108246600,113596560,91476000,53222400,19958400,3628800,39916800,120543840,301835952,631548456,1103897520,1600744200,1899041760,1801411920,1317254400,698544000,239500800
-; Formula: a(n) = A233543(n-1)*A130534(n-1)
 
 #offset 1
 
-sub $0,1
 mov $1,$0
-seq $1,130534 ; Triangle T(n,k), 0 <= k <= n, read by rows, giving coefficients of the polynomial (x+1)(x+2)...(x+n), expanded in increasing powers of x. T(n,k) is also the unsigned Stirling number |s(n+1, k+1)|, denoting the number of permutations on n+1 elements that contain exactly k+1 cycles.
-seq $0,233543 ; Triangle read by rows: T(n,k) = k!.
-mul $0,$1
+mov $4,$0
+mul $4,8
+nrt $4,2
+add $4,1
+div $4,2
+mov $8,0
+sub $0,1
+mov $3,$4
+bin $3,2
+sub $1,$3
+sub $1,1
+mov $5,$1
+sub $4,$1
+lpb $4
+  sub $4,1
+  mov $6,$3
+  add $6,$5
+  mov $9,$6
+  seq $9,48994 ; Triangle of Stirling numbers of first kind, s(n,k), n >= 0, 0 <= k <= n.
+  mul $9,5
+  gcd $9,0
+  div $9,5
+  mov $17,229383
+  add $5,1
+  mov $7,$5
+  bin $7,2
+  add $7,$1
+  add $7,1
+  mov $10,$7
+  mul $7,8
+  nrt $7,2
+  sub $7,1
+  div $7,2
+  mov $11,$7
+  add $11,1
+  bin $11,2
+  sub $10,$11
+  sub $10,1
+  mov $12,1
+  mov $14,1
+  bin $7,$10
+  mov $13,1
+  mov $15,9
+  mov $16,0
+  mov $6,2
+  mov $6,$9
+  mul $6,$7
+  add $8,$6
+lpe
+mov $1,$8
+mov $2,$0
+add $0,1
+mul $0,8
+nrt $0,2
+add $0,1
+div $0,2
+bin $0,2
+sub $2,$0
+mov $0,1
+fac $0,$2
+mul $0,$8

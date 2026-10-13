@@ -5,7 +5,7 @@
 
 lpb $0
   mov $2,$0
-  seq $2,139250 ; Toothpick sequence (see Comments lines for definition).
+  seq $2,139250 ; The toothpick sequence (see Comments lines for definition).
   sub $0,1
   add $1,$2
 lpe

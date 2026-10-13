@@ -16,7 +16,15 @@ lpb $2
   mul $4,$0
   mov $6,$0
   mul $6,2
-  seq $6,52653 ; E.g.f. (1-2x^2)/(1-x-2x^2).
+  mov $7,1
+  fac $7,$6
+  max $6,2
+  mov $8,2
+  pow $8,$6
+  add $8,1
+  div $8,3
+  mul $7,$8
+  mov $6,$7
   mul $6,3
   div $6,$4
   mov $5,$6

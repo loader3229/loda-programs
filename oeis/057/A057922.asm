@@ -1,7 +1,10 @@
-; A057922: d(n) divides d(n+1), where d(n) is number of positive divisors of n.
+; A057922: Numbers k such that d(k) divides d(k+1), where d(k) is number of positive divisors of k.
 ; Submitted by kpmonaghan
 ; 1,2,5,7,11,13,14,17,19,21,23,26,29,31,33,34,37,38,39,41,43,44,47,49,53,55,57,59,61,65,67,69,71,73,75,77,79,83,85,86,87,89,93,94,95,97,98,101,103,104,107,109,113,116,118,119,122,125,127,129,131,133,134,135,137,139,141,142,145,147,149,151,155,157,158,159,163,167,171,173
 
+#offset 1
+
+sub $0,1
 mov $1,-1
 mov $2,$0
 pow $2,2

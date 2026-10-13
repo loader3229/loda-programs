@@ -10,7 +10,7 @@ sub $0,1
 lpb $0
   mov $2,$0
   add $2,1
-  seq $2,280246 ; a(n) = Product_{d|n} psi(d), where psi(m) is the sum of totatives of m (A023896).
+  seq $2,280246 ; a(n) = Product_{d|n} A023896(d), where A023896(m) is the sum of totatives of m.
   sub $0,1
   mul $1,$2
 lpe

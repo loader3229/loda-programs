@@ -1,4 +1,4 @@
-; A204263: Symmetric matrix: f(i,j)=(i+j mod 3), by antidiagonals.
+; A204263: Symmetric matrix: T(i,j)=(i+j mod 3), by antidiagonals.
 ; Submitted by wareyore
 ; 2,0,0,1,1,1,2,2,2,2,0,0,0,0,0,1,1,1,1,1,1,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,2,2
 ; Formula: a(n) = floor((sqrtint(8*n)+3)/2)%3

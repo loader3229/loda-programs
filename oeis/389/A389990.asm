@@ -1,4 +1,4 @@
-; A389990: Decimal expansion of the product of alternating ratio's of consecutive positive integer pairs.
+; A389990: Decimal expansion of the product of alternating ratios of consecutive positive integer pairs.
 ; Submitted by DukeBox
 ; 1,6,6,9,2,5,3,6,8,3,3,4,8,1,4,6,3,7,2,5,6,2,8,5,9,4,6,5,5,9,8,0,9,3,6,1,7,9,8,7,9,8,6,0,2,6,9,8,0,6,9,4,0,0,4,8,9,9,6,5,4,7,4,0,2,0,7,3,6,3,9,8,5,4,1,9,0,5,2,8
 

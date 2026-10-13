@@ -25,13 +25,22 @@ lpb $3
   mov $1,$0
   sub $1,$6
   add $5,$1
-  pow $1,$5
   mov $7,$0
   seq $7,48994 ; Triangle of Stirling numbers of first kind, s(n,k), n >= 0, 0 <= k <= n.
   mul $7,5
   gcd $7,0
   div $7,5
-  seq $0,233543 ; Triangle read by rows: T(n,k) = k!.
+  mov $8,$0
+  add $0,1
+  mul $0,8
+  nrt $0,2
+  add $0,1
+  div $0,2
+  bin $0,2
+  pow $1,$5
+  sub $8,$0
+  mov $0,1
+  fac $0,$8
   mul $0,$7
   mul $0,$1
   add $4,$0

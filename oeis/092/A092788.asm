@@ -1,6 +1,6 @@
-; A092788: USUP perfect numbers.
+; A092788: Ratios m/A109712(m) for USUP perfect numbers m (A092760).
 ; Submitted by loader3229
-; 1,1,1,1,1,2,2,1,2,1,2,2,2,2,2,2
+; 1,1,1,1,1,1,2,2,1,2,1,2,2,2,2,2,2
 ; Formula: a(n) = (sumdigits(2^n,14)>=11)+1
 
 #offset 1

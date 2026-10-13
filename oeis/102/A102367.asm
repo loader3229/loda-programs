@@ -12,7 +12,7 @@ pow $2,2
 lpb $2
   sub $2,1
   mov $3,$1
-  seq $3,46947 ; Numbers k such that |sin(k)| (or |tan(k)| or |sec(k)|) decreases monotonically to 0; also |cos(k)| (or |cosec(k)| or |cot(k)|) increases.
+  seq $3,46947 ; Numbers k such that |sin(k)| (or |tan(k)|) decreases monotonically to 0 and |sec(k)| decreases monotonically to 1; also |cos(k)| (or |cosec(k)| or |cot(k)|) increases.
   mov $5,$3
   mul $3,338
   gcd $3,4

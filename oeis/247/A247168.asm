@@ -20,7 +20,15 @@ lpb $3
   seq $9,350972 ; E.g.f. = tan(x).
   mul $9,$8
   mul $8,2
-  seq $8,52653 ; E.g.f. (1-2x^2)/(1-x-2x^2).
+  mov $10,1
+  fac $10,$8
+  max $8,2
+  mov $11,2
+  pow $11,$8
+  add $11,1
+  div $11,3
+  mul $10,$11
+  mov $8,$10
   mul $8,3
   div $8,$9
   mov $6,$8

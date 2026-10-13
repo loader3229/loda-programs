@@ -13,6 +13,7 @@ lpe
 lpb $0
   trn $0,1
   mov $2,$0
+  add $2,1
   seq $2,157334 ; First differences of A156799.
   add $1,$2
 lpe

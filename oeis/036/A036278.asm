@@ -29,14 +29,22 @@ mul $5,$0
 add $6,$5
 div $9,$4
 mul $0,2
-seq $0,52653 ; E.g.f. (1-2x^2)/(1-x-2x^2).
-gcd $5,$0
+mov $11,1
+fac $11,$0
+max $0,2
+mov $12,2
+pow $12,$0
+add $12,1
+div $12,3
+mul $11,$12
+gcd $5,$11
 div $6,$5
 mov $7,-4
 pow $7,$3
 dif $7,2
 mov $3,$7
 mul $3,$9
+mov $0,$11
 mov $0,$6
 mul $0,-1
 mul $0,$8
