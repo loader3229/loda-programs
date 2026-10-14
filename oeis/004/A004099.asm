@@ -1,12 +1,10 @@
 ; A004099: Sum of digits of Euler numbers.
-; Submitted by [BAT] Svennemans
+; Submitted by loader3229
 ; 1,1,1,2,5,7,7,11,17,25,13,29,29,34,46,38,41,61,61,65,62,70,85,74,83,88,91,110,113,124,106,128,170,142,157,164,128,178,172,146,176,178,178,209,206,214,247,218,263,268,235,335,284,259,295,254,278,295,283,254,308,313,343,335,383,349,394,380,386,412,400,452,389,394,433,425,446,394,430,443
+; Formula: a(n) = sumdigits(gcd(A155585(n),A122045(n)),10)
 
-seq $0,111 ; Euler or up/down numbers: e.g.f. sec(x) + tan(x). Also for n >= 2, half the number of alternating permutations on n letters (A001250).
-lpb $0
-  mov $2,$0
-  mod $2,10
-  div $0,10
-  add $1,$2
-lpe
-mov $0,$1
+mov $1,$0
+seq $1,122045 ; Euler (or secant) numbers E(n).
+seq $0,155585 ; a(n) = 2^n*E(n, 1) where E(n, x) are the Euler polynomials.
+gcd $0,$1
+dgs $0,10
